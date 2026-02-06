@@ -133,4 +133,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://sbm-frontend-s3-bucket.s3-website.eu-north-1.amazonaws.com",
+    "http://localhost:5173",
+]
+
+CORS_ALLOW_CREDENTIALS = True
